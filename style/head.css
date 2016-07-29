@@ -1,0 +1,217 @@
+@charset "utf-8";
+
+/*
+	@名称: base
+	@功能: 重设浏览器默认样式
+*/
+
+/* 防止用户自定义背景颜色对网页的影响，添加让用户可以自定义字体 */
+html{
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+}
+
+/* 内外边距通常让各个浏览器样式的表现位置不同 */
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td,hr,button,article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section {
+    margin:0;padding:0;
+}
+
+/* 重设 HTML5 标签, IE 需要在 js 中 createElement(TAG) */
+article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section {
+    display:block;
+}
+
+/* HTML5 媒体文件跟 img 保持一致 */
+audio,canvas,video {
+    display: inline-block;*display: inline;*zoom: 1;
+}
+
+/* 要注意表单元素并不继承父级 font 的问题 */
+body,button,input,select,textarea{
+    font:12px/1.5 tahoma,arial,\5b8b\4f53;
+}
+input,select,textarea{
+    font-size:100%;
+}
+
+/* 去掉各Table  cell 的边距并让其边重合 */
+table{
+    border-collapse:collapse;border-spacing:0;
+}
+
+/* IE bug fixed: th 不继承 text-align*/
+th{
+    text-align:inherit;
+}
+
+/* 去除默认边框 */
+fieldset,img{
+    border:0;
+}
+
+/* ie6 7 8(q) bug 显示为行内表现 */
+iframe{
+    display:block;
+}
+
+/* 去掉 firefox 下此元素的边框 */
+abbr,acronym{
+    border:0;font-variant:normal;
+}
+
+/* 一致的 del 样式 */
+del {
+    text-decoration:line-through;
+}
+
+address,caption,cite,code,dfn,em,th,var {
+    font-style:normal;
+    font-weight:700;
+}
+
+/* 去掉列表前的标识, li 会继承 */
+ol,ul {
+    list-style:none;
+}
+
+/* 对齐是排版最重要的因素, 别让什么都居中 */
+caption,th {
+    text-align:center;
+}
+
+/* 来自yahoo, 让标题都自定义, 适应多个系统应用
+h1,h2,h3,h4,h5,h6 {
+	font-size:100%;
+	font-weight:700;
+} */
+
+q:before,q:after {
+    content:'';
+}
+
+/* 统一上标和下标 */
+sub, sup {
+    font-size: 75%; line-height: 0; position: relative; vertical-align: baseline;
+}
+sup {top: -0.5em;}
+sub {bottom: -0.25em;}
+
+
+
+/* 让链接在 hover 状态下显示下划线 */
+a:hover {
+    text-decoration:underline;
+}
+
+/* 默认不显示下划线，保持页面简洁 */
+ins,a {
+    text-decoration:none;
+    color: #999;
+}
+
+/* 清理浮动 */
+.fn-clear:after {
+    visibility:hidden;
+    display:block;
+    font-size:0;
+    content:" ";
+    clear:both;
+    height:0;
+}
+.fn-clear {
+    zoom:1; /* for IE6 IE7 */
+}
+
+/* 隐藏, 通常用来与 JS 配合 */
+body .fn-hide {
+    display:none;
+}
+.show{
+    display:block;
+}
+.hide {
+    display:none;
+}
+
+/* 设置内联, 减少浮动带来的bug */
+.fn-left,.fn-right {
+    display:inline;
+}
+.fl{
+    float:left;
+}
+.fr {
+    float:right;
+}
+
+.red{ color:#D5182A;}
+.mb10{ margin-bottom:10px;} .mb20{ margin-bottom:20px;}
+.mt10{ margin-top:10px;}
+.ml10{ margin-left:10px;}
+.mr10{ margin-right:10px;}
+.pt10{ padding-top:10px;}
+.pb10{ padding-bottom:10px;}
+
+
+
+.head-content{ background:#FFF;}
+.w1000{ width:1000px; margin:0 auto;}
+.w1020{ width:1020px; margin:0 auto;}
+body{overflow-x:hidden;}
+
+.headNav{ height:38px; background-color:#8e0000;}
+.headNav .navCon{ height:38px; position:relative; z-index:11;}
+.headNav .navCon .navCon-cate{ width:210px; height:38px; line-height:38px; font-size:14px; font-weight:bold; text-indent:10px; background:#a30000;/*#A21C1D*/ color:#FFF; position:relative;}
+
+.headNav .navCon .navCon-menu li{float: left;height: 38px;line-height: 38px;overflow: hidden;text-align: center;width: 100px;}
+.headNav .navCon .navCon-menu li a{color: #FFFFFF;display:block;font-size: 14px; font-weight: bold;height: 38px; line-height:37px;text-decoration: none;width: 100px;}
+.headNav .navCon .navCon-menu li a:hover, .cur {color: #666666;text-decoration: none;}
+.headNav .navCon .navCon-menu li a:hover, .curMenu {background:#6A0000;color: #FFFFFF;}
+
+.headNav .navCon .navCon-cate .navCon-cate-title{ background:url("../image/header_menu_ico.gif") no-repeat 176px center;}
+.headNav .navCon .navCon-cate .navCon-cate-title a{ color:#ffffff;}
+.headNav .navCon .navCon-cate .navCon-cate-title a:hover{ text-decoration:none;}
+
+.headNav .navCon .navCon-cate .cateMenu{ position:absolute; left:0px; font-family:"微软雅黑"; box-shadow:4px 2px 5px rgba(0, 0, 0, 0.3); background:#8d0000; cursor:pointer;}
+.headNav .navCon .navCon-cate .cateMenu li{ width:210px;overflow:hidden; border-bottom:1px solid #7d0000;border-top:1px solid #a40000;}
+.headNav .navCon .navCon-cate .cateMenu li .cate-tag{ width:190px; padding:10px 5px 10px 15px; overflow:hidden; line-height:25px;}
+.headNav .navCon .navCon-cate .cateMenu li .cate-tag strong{ height:25px; line-height:25px; width:172px; display:block; text-indent:0px; background:url(../image/index_new_bg.png) 160px -128px no-repeat;}
+.headNav .navCon .navCon-cate .cateMenu li .cate-tag strong a{ font-size:14px; font-weight:bold; color:#fff;}
+.headNav .navCon .navCon-cate .cateMenu li .cate-tag .listModel{text-indent:0px; }
+.headNav .navCon .navCon-cate .cateMenu li .cate-tag .listModel p{ height:26px;}
+.headNav .navCon .navCon-cate .cateMenu li .cate-tag .listModel a{ font-size:12px; font-weight:normal; color:#e1bdbd;text-indent:0px; padding:0 11px 0 0;}
+.headNav .navCon .navCon-cate .cateMenu .on{ background:#665446; *margin-bottom:-4px; }
+.headNav .navCon .navCon-cate .cateMenu .on .cate-tag .listModel a{ color:#FFFFFF;}
+
+.float-list-dnav {background: none repeat scroll 0 0 #8D0000;clear: both;font-size: 14px;font-weight: bold;height: 47px;line-height: 47px; width: 210px;}
+.float-list-dnav a {color: #FFFFFF;margin: 0 10px 0 10px;}
+.float-list-dnav a:hover{ color:#ffffff;}
+
+.headNav .navCon .navCon-cate .cateMenu .list-item{ width:750px;height:510px; padding:10px 10px 20px 10px; border:1px solid #A7A7A7; border-left:none; background:#FFFFFF; box-shadow:4px 3px 5px rgba(0, 0, 0, 0.5); background:url(../image/catemenubg.png) repeat-y #FFF; position:absolute; left:210px; top:0px;}
+.headNav .navCon .navCon-cate .cateMenu .list-item .itemleft{ width:510px; float:left;}
+.headNav .navCon .navCon-cate .cateMenu .list-item .itemright{ width:220px; float:right;}
+.headNav .navCon .navCon-cate .cateMenu .list-item dl{ padding-left:10px;}
+.headNav .navCon .navCon-cate .cateMenu .list-item dt{ color:#665446; font-size:14px; text-indent:0px; border-bottom:2px solid #665446; margin-bottom:8px; font-family:"微软雅黑";}
+.headNav .navCon .navCon-cate .cateMenu .list-item dd{font-size:12px; font-weight:normal; text-indent:0px; line-height:26px;font-family:"微软雅黑";}
+.headNav .navCon .navCon-cate .cateMenu .list-item dd a{ color:#646464; margin-right:5px; width:75px; height:22px; overflow:hidden; display:block; float:left; margin-bottom:5px; }
+.headNav .navCon .navCon-cate .cateMenu .list-item dd a:hover{ color:#000;}
+
+.headNav .navCon .navCon-cate .cateMenu .list-item .itemright .news-list{ padding-left:10px;}
+.headNav .navCon .navCon-cate .cateMenu .list-item .itemright .news-list p{ line-height:24px; text-indent:0px; font-size:12px; font-weight:normal; color:#000;}
+.headNav .navCon .navCon-cate .cateMenu .list-item .itemright .news-list p a{ color:#646464;}
+.headNav .navCon .navCon-cate .cateMenu .list-item .itemright .news-list p a:hover{ color:#000;}
+
+.headNav .navCon .navCon-cate .cateMenu .list-item .itemright .ad-list{ padding-left:10px;}
+.headNav .navCon .navCon-cate .cateMenu .list-item .itemright .ad-list a{ display:block; width:210px; height:100px; text-indent:0px; margin-bottom:8px; overflow:hidden;}
+
+
+
+/*头部样式*/
+.header{width:100%;min-width: 990px; height: 32px;}
+.header .head_nav{width:990px;min-width: 990px; height: 32px; margin: 0 auto;line-height: 32px;}
+.header .head_nav>p{float: left;}
+.header .head_nav ul {float: right;margin: 0; }
+
+.header .head_nav ul li{width: 100px;height:32px;line-height: 32px;text-align: center;float:left;}
+
+
