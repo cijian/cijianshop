@@ -23,7 +23,9 @@ $(function () {
         function () {
             $(".cateMenu").hide();
         });
-
+    $('.ck-slide').ckSlide({
+        autoPlay: true
+    });
 
     ///*topBar置顶*/
     //var positionMenu = function (id) {
