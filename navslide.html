@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>CJ动漫</title>
+    <script src="js/jquery-1.8.3.min.js"></script>
+    <style type="text/css">
+        img{ border: 0px;}
+        body,h1,ul,li,p{margin:0;padding:0;}
+        h1{padding:0 20px;background:#333;color:#fff;}
+        a{text-decoration: none;}
+        a:active,a:focus,a { outline: none;}
+        li {  list-style-type: none;}
+        #page { padding: 0 10px; position: relative; z-index:5;margin: 0px auto;text-align: left; width: 1230px; min-height: 800px;}
+        #zhuan span{position: relative; top: -20px;color: #858585;font: 300 15px/1.625 "Microsoft YaHei","Helvetica Neue,Helvetica",Arial,sans-serif; }
+        #r_head{width: 950px; height: 248px; color: rgba(255, 255, 255, 0.2); border-color: rgba(255, 255, 255, 0.4);float: right; margin-right: 20px}
+        /*nav css*/
+        .nav { height: 48px; width: 950px; line-height: 48px;background-color:#24241f; z-index: 1000; font-family:"宋体", 'Microsoft JhengHei', "黑体", Verdana, Arial, Helvetica, sans-serif;}
+        .nav a { color: #fff;}
+        .nav a:hover {color: #fff; text-decoration: none;}
+        .nav .channel { float: left; width: 100px;font-size: 20px;text-align: center; text-decoration: none}
+        .nav .channel-now {background-color:transparent;}
+        .nav .cart { float: right; width: 154px; background-color: #4E4E4E;}
+        .cover-page-wrapper2 .move_div { height:100%; background:#414141;}
+        .cover-page-wrapper2 .active { background-color:transparent;}
+        .nav .channel{position:relative; z-index:100;}
+        /*slide*/
+        .clearfix:after { content: "."; display: block; height: 0; clear: both; visibility: hidden;font-size: 0;}
+
+    </style>
+    <script type="text/javascript">
+        $(function(){
+            var moveNav=function(o){
+                var f=$("."+o.f),a=f.find("."+o.a);
+                f.css({position:"relative"});
+                var moveDiv=function(w,l,a,b){
+                    var div=$("<div class='move_div'></div>");
+                    f.append(div);
+//                    if(b){
+//                        div.addClass("active");
+//                    }
+                    div.css({position:"absolute",left:l,width:w});
+                    addEvent(w,l,a,div,b);
+                };
+
+                var addEvent=function(w,l,a,div,b){
+                    a.each(function(){
+                        $(this).hover(function(){
+//                            if(b){
+//                                div.removeClass("active");
+//                            }
+                            var w2=$(this).outerWidth();
+                            var l2=$(this).position().left;
+                            div.stop(true,false).animate({left:l2,width:w2});
+                        },function(){
+                            if(b){
+                                div.stop(true,false).animate({left:l,width:w},function(){
+                                    div.addClass("active");
+                                });
+                            }
+                            else{
+                                div.stop(true,false).animate({left:l,width:w});
+                            }
+                        });
+                    });
+                }
+
+                a.each(function(i){
+                    if($(this).hasClass("channel-now")){
+                        var w=$(this).outerWidth();
+                        var l=$(this).position().left;
+//                        if(i==0){
+//                            moveDiv(w,l,a,true);
+//                        }else{
+                        moveDiv(w,l,a);
+//                        }
+                    }
+                });
+            }
+            moveNav({
+                f:"cover-page-wrapper2",
+                a:"channel"
+            });
+        });
+    </script>
+</head>
+<body id="zhuye">
+<div id="page">
+    <div id="r_head">
+        <div class="nav">
+            <div style="position: relative;" class="cover-page-wrapper cover-page-wrapper2 clearfix">
+                <a class="channel channel-now" href="show.html"><span>新闻</span></a>
+                <a class="channel " href="xinfan.html"><span>漫番</span></a>
+                <a class="channel " href="animation.html"><span>漫画</span></a>
+                <a class="channel " href="zhoubian.html"><span>周边</span></a>
+                <a class="channel " href="rimuise.html"><span>日漫音乐</span></a>
+                <a class="channel " href="link.html"><span>link</span></a>
+                <div class="nav_s">
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+</div>
+</div>
+</body>
+</html>
