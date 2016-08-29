@@ -2,8 +2,17 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="style/base.css"/>
     <title>登录首页</title>
+    <link rel="stylesheet" href="style/base.css"/>
+    <script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+    <script type="text/javascript">
+        $(function(){
+            $(".swith").click(function(){
+                $('.con_center').find('.swith').show();
+                $(this).closest('.swith').hide();
+            })
+        })
+    </script>
     <style type="text/css">
         a{
             color: #5e5e5e;
@@ -193,11 +202,11 @@
 <div class="contener">
     <div class="con_center">
         <!--pc登录-->
-        <div class="swith_pc" style="display: none;">
+        <div class="swith" style="display: none;">
             <div class="bk_img"></div>
             <div class="login">
                 <div class="lg_rt">
-                    <a href="#">
+                    <a href="#" class="switch">
                         <img src="style/img/anniu.png" alt="切换二维码"/>
                     </a>
                 </div>
@@ -236,11 +245,11 @@
 
 
          <!--微信登录-->
-        <div class="swith_pc">
+        <div class="swith">
             <div class="bk_img"></div>
             <div class="login">
                 <div class="lg_rt">
-                    <a href="#">
+                    <a href="#" class="switch">
                         <img src="style/img/pcduan.png" alt="切换pc"/>
                     </a>
                 </div>
