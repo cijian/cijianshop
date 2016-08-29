@@ -5,6 +5,13 @@
     <link rel="stylesheet" href="style/base.css"/>
     <title>登录首页</title>
     <style type="text/css">
+        a{
+            color: #5e5e5e;
+            text-decoration:none;
+        }
+        a:hover{
+            color: red;
+        }
         body{
             margin: 0;
         }
@@ -12,14 +19,17 @@
         .nav{
             width: 100%;
             height: 80px;
-            background: #FFFFFF no-repeat;
+            background-color: transparent;
         }
 
-
+        .login_title{
+            font-size: 21px;
+        }
         .contener{
             width: 100%;
-            height: 500px;
+            height: 550px;
             background:url("style/img/contener.png") no-repeat;
+            background-size:cover;
         }
         .contener .bk_img{
             width: 100%;
@@ -41,8 +51,88 @@
             float: right;
             width: 340px;
             height: 365px;
-            margin: 80px 110px 0 ;
+            margin: 80px 90px 0 ;
             background: #FFFFFF;
+        }
+        .login_label{
+            display: block;
+            margin-top: 1px;
+            float: left;
+            width: 38px;
+            height: 38px;
+            border-right: 1px solid #bdbdbd;
+            background: url("style/img/pwd-icons-new.png") no-repeat;
+        }
+        .login_pwd{
+            display: block;
+            margin-top: 1px;
+            float: left;
+            width: 38px;
+            height: 38px;
+            border-right: 1px solid #bdbdbd;
+            background: url("style/img/pwd-icons-new.png") -48px 0;
+        }
+        .input_div .label_del{
+
+        }
+        .input_div input{
+            display: block;
+            float: left;
+            width: 210px;
+            height: 32px;
+            border: 0;
+            margin: 1px 0 0 5px;
+        }
+        .input_div{
+            width: 200px;
+            height: 80px;
+            display: block;
+        }
+        .lg_con{
+            width: 300px;
+            padding: 20px;
+            height: 300px;
+            margin-top: 30px;
+        }
+        .input_div{
+            width: 300px;
+            height: 40px;
+            border: solid 1px #606060;
+            margin-bottom: 20px;
+            margin-top: 20px;
+        }
+        .sum_btn{
+            width: 300px;
+            height: 40px;
+            line-height: 42px;
+            background: #AF0000;
+        }
+        .sub{
+            border: 0;
+            padding-bottom: 20px;
+
+        }
+        .sum_btn{
+            font-family: "Microsoft YaHei", Arial, Helvetica, sans-serif, "宋体";
+            font-size: 16px;
+            color: #ffffff;
+            line-height: 10px;
+        }
+        .sum_btn:hover{
+            background-color: #c40000;
+        }
+        .sub input{
+            border-radius: 6px;
+            border: 0;
+        }
+        .lg_footer{
+            font-family: "Microsoft YaHei", Arial, Helvetica, sans-serif, "宋体";
+            font-size: 12px;
+        }
+        .lg_footer span{
+            display: inline;
+            float: right;
+            padding-right: 15px;
         }
     </style>
 </head>
@@ -58,16 +148,37 @@
     <div class="con_center">
         <div class="bk_img"></div>
         <div class="login">
-
+            <div class="lg_con">
+                <div class="login_title">密码登录</div>
+                <form action="" method="post">
+                    <div class="input_div">
+                        <label class="login_label"  for="lg_name"></label>
+                        <input type="text" id="lg_name" value=""/>
+                        <span class="label_del"></span>
+                    </div>
+                    <div class="input_div">
+                        <label class="login_pwd"  for="lg_pwd"></label>
+                        <input type="text" id="lg_pwd" value=""/>
+                        <span class="label_del"></span>
+                    </div>
+                    <div class="sub">
+                        <input type="submit" class="sum_btn" value="登录"/>
+                    </div>
+                </form>
+                    <div class="lg_footer">
+                    <span><a href="#">忘记密码</a></span>
+                    <span><a href="#">免费注册</a></span>
+                </div>
+            </div>
         </div>
-
-
 
     </div>
 </div>
 <div class="footer">
     <div class="foot_center">
-        
+        <ul>
+            <li></li>
+        </ul>
     </div>
 </div>
 </body>
