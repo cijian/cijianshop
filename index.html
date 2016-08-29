@@ -9,11 +9,15 @@
             color: #5e5e5e;
             text-decoration:none;
         }
+        li{
+            list-style-type:none;
+        }
         a:hover{
             color: red;
         }
         body{
             margin: 0;
+            font-family: "Microsoft YaHei", Arial, Helvetica, sans-serif, "宋体";
         }
 
         .nav{
@@ -23,7 +27,7 @@
         }
 
         .login_title{
-            font-size: 21px;
+            font-size: 18px;
         }
         .contener{
             width: 100%;
@@ -81,12 +85,7 @@
             width: 210px;
             height: 32px;
             border: 0;
-            margin: 1px 0 0 5px;
-        }
-        .input_div{
-            width: 200px;
-            height: 80px;
-            display: block;
+            margin: 2px 0 0 5px;
         }
         .lg_con{
             width: 300px;
@@ -113,7 +112,6 @@
 
         }
         .sum_btn{
-            font-family: "Microsoft YaHei", Arial, Helvetica, sans-serif, "宋体";
             font-size: 16px;
             color: #ffffff;
             line-height: 10px;
@@ -126,13 +124,61 @@
             border: 0;
         }
         .lg_footer{
-            font-family: "Microsoft YaHei", Arial, Helvetica, sans-serif, "宋体";
             font-size: 12px;
         }
         .lg_footer span{
             display: inline;
             float: right;
             padding-right: 15px;
+        }
+        .tip{
+            border: 1px solid #ffe57d;
+            background: #fff6d2;
+            font-size: 12px;
+            color: #5e5e5e;
+        }
+        .tip i{
+            display: block;
+            float: left;
+            margin: 4px;
+            width: 16px;
+            height: 17px;
+            overflow: hidden;
+            background: url(style/img/pwd-icons-new.png) -104px -22px no-repeat;
+        }
+        .msg{
+            display: block;
+            width: 80%;
+            padding: 6px;
+            margin-left: 30px;
+        }
+        .lg_rt{
+            display: block;
+            float: right;
+            width: 62px;
+            height: 62px;
+            margin: 3px;
+        }
+
+
+        .qrcode{
+            width:150px;
+            height:150px;
+            padding: 5px;
+            margin:20px auto;
+        }
+        .dis_btn{
+            position: relative;
+            top: -100px;
+            left: -10px;
+            width: 150px;
+            height: 38px;
+            line-height: 30px;
+            background: #606060;
+            border-radius: 5px;
+            border: 0;
+            font-size: 18px;
+            color: #ffffff;
         }
     </style>
 </head>
@@ -146,32 +192,79 @@
 
 <div class="contener">
     <div class="con_center">
-        <div class="bk_img"></div>
-        <div class="login">
-            <div class="lg_con">
-                <div class="login_title">密码登录</div>
-                <form action="" method="post">
-                    <div class="input_div">
-                        <label class="login_label"  for="lg_name"></label>
-                        <input type="text" id="lg_name" value=""/>
-                        <span class="label_del"></span>
+        <!--pc登录-->
+        <div class="swith_pc" style="display: none;">
+            <div class="bk_img"></div>
+            <div class="login">
+                <div class="lg_rt">
+                    <a href="#">
+                        <img src="style/img/anniu.png" alt="切换二维码"/>
+                    </a>
+                </div>
+                <div class="lg_con">
+                    <div class="login_title">
+                        <span>密码登录</span>
+                        <div class="tip" style="display: none;">
+                            <i></i>
+                            <span class="msg">
+                                帐号名或密码错误
+                            </span>
+                        </div>
                     </div>
-                    <div class="input_div">
-                        <label class="login_pwd"  for="lg_pwd"></label>
-                        <input type="text" id="lg_pwd" value=""/>
-                        <span class="label_del"></span>
-                    </div>
-                    <div class="sub">
-                        <input type="submit" class="sum_btn" value="登录"/>
-                    </div>
-                </form>
+                    <form action="" method="post">
+                        <div class="input_div">
+                            <label class="login_label"  for="lg_name"></label>
+                            <input type="text" id="lg_name" value=""/>
+                            <span class="label_del"></span>
+                        </div>
+                        <div class="input_div">
+                            <label class="login_pwd"  for="lg_pwd"></label>
+                            <input type="text" id="lg_pwd" value=""/>
+                            <span class="label_del"></span>
+                        </div>
+                        <div class="sub">
+                            <input type="submit" class="sum_btn" value="登录"/>
+                        </div>
+                    </form>
                     <div class="lg_footer">
-                    <span><a href="#">忘记密码</a></span>
-                    <span><a href="#">免费注册</a></span>
+                        <span><a href="#">免费注册</a></span>
+                        <span><a href="#">忘记密码</a></span>
+                    </div>
                 </div>
             </div>
         </div>
 
+
+         <!--微信登录-->
+        <div class="swith_pc">
+            <div class="bk_img"></div>
+            <div class="login">
+                <div class="lg_rt">
+                    <a href="#">
+                        <img src="style/img/pcduan.png" alt="切换pc"/>
+                    </a>
+                </div>
+                <div class="lg_con">
+                    <div class="login_title">
+                        <span>扫码登录，防止盗号</span>
+                        <div class="tip" style="display: none;">
+                            <i></i>
+                            <span class="msg">
+                                帐号名或密码错误
+                            </span>
+                        </div>
+                    </div>
+                    <div class="qrcode">
+                        <img src="style/img/weixin.png"/>
+                        <input type="button" value="待开发" class="dis_btn" disabled/>
+                    </div>
+                    <div class="lg_footer">
+                        <span><a href="#">忘记密码</a></span>
+                        <span><a href="#">切换帐号登录</a></span>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
 <div class="footer">
