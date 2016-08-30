@@ -14,8 +14,13 @@
             $('.label_del').on('click',function(){
                 $(this).closest('div').find('input').val('');
             });
+            $('input').focus(function(){
+               $(this).closest('div').addClass('h_line');
+            }).blur(function(){
+                $(this).closest('div').removeClass('h_line');
+            });
         })
-    </script>
+    </script>s
     <style type="text/css">
 
 
@@ -198,6 +203,9 @@
             float: left;
             margin-left: 15px;
         }
+        .h_line{
+            border: 1px #009933 solid;
+        }
     </style>
 </head>
 <body>
@@ -237,7 +245,7 @@
                         </div>
                         <div class="input_div">
                             <label class="login_pwd"  for="lg_pwd"></label>
-                            <input type="text" id="lg_pwd" value=""/>
+                            <input type="password" id="lg_pwd" value=""/>
                             <span class="label_del"></span>
                         </div>
                         <div class="vf_div">

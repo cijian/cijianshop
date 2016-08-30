@@ -2,27 +2,44 @@
 <html>
 <head lang="en">
     <meta charset="UTF-8">
-    <title></title>
+    <title>个人注册</title>
     <link rel="stylesheet" href="style/base.css"/>
     <script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
     <script type="text/javascript">
         $(function(){
-        })
+        });
     </script>
     <style type="text/css">
-        a{
-            color: #5e5e5e;
-            text-decoration:none;
+        .div_reg{
+            width: 530px;
+            /*background-color: #009933;*/
+            height: 500px;
+            margin-left: 10%;
+            padding: 30px 0 0 20px;
         }
-        li{
-            list-style-type:none;
+        .reg_input{
+            width: 430px;
+            height: 40px;
+            border: solid 1px #606060;
         }
-        a:hover{
-            color: red;
+        .reg_input label{
+            line-height: 40px;
+            font-size: 14px;
+            text-align: center;
+            color: #363636;
+            display: block;
+            width: 120px;
+            height: 100%;
+            float: left;
         }
-        body{
-            margin: 0;
-            font-family: "Microsoft YaHei", Arial, Helvetica, sans-serif, "宋体";
+        .reg_input input{
+            width: 300px;
+            height: 38px;
+            border: 0;
+        }
+        .reg_tip{
+            width: 430px;
+            height: 30px;
         }
     </style>
 </head>
@@ -36,7 +53,40 @@
 
 <div class="contener">
     <div class="con_center">
-
+        <div class="div_reg">
+            <form action="#">
+                <div class="reg_input">
+                    <label for="input_name">用&nbsp;户&nbsp;名</label>
+                    <input type="text" value="" placeholder="您的帐号名" id="input_name"/>
+                </div>
+                <div class="reg_tip"></div>
+                <div class="reg_input">
+                    <label for="input_pwd">设&nbsp;置&nbsp;密&nbsp;码</label>
+                    <input type="password" value="" placeholder="至少六位字符" id="input_pwd"/>
+                </div>
+                <div class="reg_tip"></div>
+                <div class="reg_input">
+                    <label for="input_pwd2">确&nbsp;认&nbsp;密&nbsp;码</label>
+                    <input type="password" value="" placeholder="请在次输入密码" id="input_pwd2"/>
+                </div>
+                <div class="reg_tip"></div>
+                <div class="reg_input">
+                    <label for="input_phone">中国&nbsp;+&nbsp;86</label>
+                    <input type="text" value="" placeholder="请输入手机号码" id="input_phone"/>
+                </div>
+                <div class="reg_tip"></div>
+                <div class="reg_input">
+                    <label for="input_verf">验&nbsp;证&nbsp;码</label>
+                    <input type="text" value="" placeholder="请输入验证码" id="input_verf"/>
+                </div>
+                <div class="reg_tip"></div>
+                <div class="reg_input">
+                    <label for="input_pvf">手机验证码</label>
+                    <input type="text" value="" placeholder="请输入手机验证码" id="input_pvf"/>
+                </div>
+                <div class="reg_tip"></div>
+            </form>
+        </div>
     </div>
 </div>
 <div class="footer">
