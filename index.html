@@ -10,7 +10,10 @@
             $(".switch").click(function(){
                 $('.con_center').find('.swith').show();
                 $(this).closest('.swith').hide();
-            })
+            });
+            $('.label_del').on('click',function(){
+                $(this).closest('div').find('input').val('');
+            });
         })
     </script>
     <style type="text/css">
@@ -98,7 +101,8 @@
             height: 40px;
             border: solid 1px #606060;
             margin-bottom: 20px;
-            margin-top: 20px;
+
+            float: left;
         }
         .input_verfiy input{
             display: block;
@@ -228,6 +232,20 @@
             color: #5e5e5e;
             margin: 0 auto;
         }
+        .vf_div{
+            width: 100%;
+            vertical-align: middle;
+            line-height: 40px;
+            color: #14171b;
+            font-size: 16px;
+        }
+        .vf_div img{
+            width: 100px;
+            height: 40px;
+            display: block;
+            float: left;
+            margin-left: 15px;
+        }
     </style>
 </head>
 <body>
@@ -270,13 +288,16 @@
                             <input type="text" id="lg_pwd" value=""/>
                             <span class="label_del"></span>
                         </div>
-                        <div class="input_verfiy">
-                            <input type="text" id="lg_vf" value=""/>
-                            <span class="label_del"></span>
+                        <div class="vf_div">
+                            <div class="input_verfiy">
+                                <input type="text" id="lg_vf" value=""/>
+                                <span class="label_del"></span>
+                            </div>
+                            <img src="style/img/logo.png" alt="验证吗"/>
+                            <a href="#">看不清</a>
                         </div>
                         <div class="sub">
                             <input type="submit" class="sum_btn" value="登录"/>
-                            <span class="label_del"></span>
                         </div>
                     </form>
                     <div class="lg_footer">
@@ -323,11 +344,11 @@
 <div class="footer">
     <div class="foot_center">
         <ul class="foot_li">
-            <li>关于我们</li>
-            <li>联系我们</li>
-            <li>友情链接</li>
-            <li>销售联盟</li>
-            <li>人才招聘</li>
+            <li><a href="#">关于我们</a></li>
+            <li><a href="#">联系我们</a></li>
+            <li><a href="#">友情链接</a></li>
+            <li><a href="#">销售联盟</a></li>
+            <li><a href="#">人才招聘</a></li>
         </ul>
         <span>Copyright © 2004-2016  xxx.com 版权所有</span>
     </div>
