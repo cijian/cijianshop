@@ -53,7 +53,7 @@
 
         .footer{
             width: 100%;
-            height: 150px;
+            height: 100px;
 
         }
         .nav_center,.con_center,.foot_center{
@@ -63,7 +63,7 @@
         .login{
             float: right;
             width: 340px;
-            height: 365px;
+            height: 380px;
             margin: 80px 90px 0 ;
             background: #FFFFFF;
         }
@@ -85,13 +85,33 @@
             border-right: 1px solid #bdbdbd;
             background: url("style/img/pwd-icons-new.png") -48px 0;
         }
-        .input_div .label_del{
-
+        .label_del{
+            display: block;
+            float: left;
+            width: 23px;
+            height: 40px;
+            cursor: pointer;
+            background: url("style/img/pwd-icons-new.png") 0 42px;
+        }
+        .input_verfiy{
+            width: 120px;
+            height: 40px;
+            border: solid 1px #606060;
+            margin-bottom: 20px;
+            margin-top: 20px;
+        }
+        .input_verfiy input{
+            display: block;
+            float: left;
+            width: 90px;
+            height: 32px;
+            border: 0;
+            margin: 2px 0 0 5px;
         }
         .input_div input{
             display: block;
             float: left;
-            width: 210px;
+            width: 230px;
             height: 32px;
             border: 0;
             margin: 2px 0 0 5px;
@@ -189,12 +209,24 @@
             font-size: 18px;
             color: #ffffff;
         }
-        .foot_li { margin: 20px auto; display: block; width: 80%;}
+        .foot_li { margin: 20px auto; display: block; width: 60%;height: 30px;}
         .foot_li li{
             font-size: 14px;
             float: left;
-            margin: 2px 10px;
+            margin: 2px 0;
+            height: 30px;
+            width: 20%;
+            text-align: center;
+            line-height: 30px;
+            display: block;
 
+        }
+        .foot_center span{
+            width: 30%;
+            font-size: 14px;
+            display: block;
+            color: #5e5e5e;
+            margin: 0 auto;
         }
     </style>
 </head>
@@ -238,12 +270,13 @@
                             <input type="text" id="lg_pwd" value=""/>
                             <span class="label_del"></span>
                         </div>
-                        <div class="input_div">
+                        <div class="input_verfiy">
                             <input type="text" id="lg_vf" value=""/>
                             <span class="label_del"></span>
                         </div>
                         <div class="sub">
                             <input type="submit" class="sum_btn" value="登录"/>
+                            <span class="label_del"></span>
                         </div>
                     </form>
                     <div class="lg_footer">
@@ -290,14 +323,13 @@
 <div class="footer">
     <div class="foot_center">
         <ul class="foot_li">
-            <li>测试排列</li>
-            <li>测试排列</li>
-            <li>测试排列</li>
-            <li>测试排列</li>
-            <li>测试排列</li>
-            <li>测试排列</li>
-            <li>测试排列</li>
+            <li>关于我们</li>
+            <li>联系我们</li>
+            <li>友情链接</li>
+            <li>销售联盟</li>
+            <li>人才招聘</li>
         </ul>
+        <span>Copyright © 2004-2016  xxx.com 版权所有</span>
     </div>
 </div>
 </body>
