@@ -14,8 +14,19 @@
             width: 530px;
             /*background-color: #009933;*/
             height: 500px;
-            margin-left: 10%;
-            padding: 30px 0 0 20px;
+            margin: 0 0 20px 80px;
+            padding: 50px 0 0 30px;
+            display: block;
+            float: left;
+        }
+        .reg_bg{
+            width: 400px;
+            height: 500px;
+            display: block;
+            float: right;
+        }
+        .reg_bg img{
+            width: 400px;
         }
         .reg_input{
             width: 430px;
@@ -28,18 +39,40 @@
             text-align: center;
             color: #363636;
             display: block;
-            width: 120px;
+            width: 100px;
+            border-right: solid 1px #9A9A9A;
             height: 100%;
             float: left;
         }
         .reg_input input{
             width: 300px;
             height: 38px;
+            margin-left: 10px;
             border: 0;
         }
         .reg_tip{
             width: 430px;
-            height: 30px;
+            height: 20px;
+            margin: 2px 0;
+            font-size: 10px;
+            display: inline-block;
+        }
+        .reg_sub{
+            width: 432px;
+            height: 40px;
+            background-color: #e22;;
+            border: 0;
+            border-radius: 5px;
+            color: #ffffff;
+            font-size: 20px;
+        }
+        .rtip{
+            background: url("style/img/biaoti.png") 27px -6px;
+            /*margin-top: 5px;*/
+            width: 17px;
+            height: 17px;
+            display: inline-block;
+            vertical-align:text-top;
         }
     </style>
 </head>
@@ -59,7 +92,9 @@
                     <label for="input_name">用&nbsp;户&nbsp;名</label>
                     <input type="text" value="" placeholder="您的帐号名" id="input_name"/>
                 </div>
-                <div class="reg_tip"></div>
+                <div class="reg_tip">
+                    <i class="rtip"></i>用户名不能为空！
+                </div>
                 <div class="reg_input">
                     <label for="input_pwd">设&nbsp;置&nbsp;密&nbsp;码</label>
                     <input type="password" value="" placeholder="至少六位字符" id="input_pwd"/>
@@ -85,7 +120,13 @@
                     <input type="text" value="" placeholder="请输入手机验证码" id="input_pvf"/>
                 </div>
                 <div class="reg_tip"></div>
+                <input type="submit" value="注册" class="reg_sub"/>
             </form>
+        </div>
+
+
+        <div class="reg_bg">
+            <img src="style/img/57313649_p0.jpg"/>
         </div>
     </div>
 </div>
