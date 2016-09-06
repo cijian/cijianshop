@@ -7,6 +7,11 @@
     <script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
     <script type="text/javascript">
         $(function(){
+            $('input').focus(function(){
+                $(this).closest('div').addClass('h_line');
+            }).blur(function(){
+                $(this).closest('div').removeClass('h_line');
+            });
         });
     </script>
     <style type="text/css">
@@ -49,6 +54,7 @@
             height: 38px;
             margin-left: 10px;
             border: 0;
+            outline:none;
         }
         .reg_tip{
             width: 430px;
