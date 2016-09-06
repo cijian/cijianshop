@@ -142,9 +142,9 @@ body .fn-hide {
 .w1020{ width:1020px; margin:0 auto;}
 body{overflow-x:hidden;}
 
-.headNav{ height:38px;}
+.headNav{ height:38px; border-bottom: 2px solid #C30101 }
 .headNav .navCon{ height:38px; position:relative; z-index:11;}
-.headNav .navCon .navCon-cate{ width:210px; height:38px; line-height:38px; font-size:14px; font-weight:bold; text-indent:10px; background:#a30000;/*#A21C1D*/ color:#FFF; position:relative;}
+.headNav .navCon .navCon-cate{ width:210px; height:38px; line-height:38px; font-size:14px; font-weight:bold; text-indent:10px; background:#B1191A;;/*#A21C1D*/ color:#FFF; position:relative;}
 
 .headNav .navCon .navCon-menu li{float: left;height: 38px;line-height: 38px;overflow: hidden;text-align: center;width: 100px;}
 .headNav .navCon .navCon-menu li a{color: #FFFFFF;display:block;font-size: 14px; font-weight: bold;height: 38px; line-height:37px;text-decoration: none;width: 100px;}
@@ -155,7 +155,7 @@ body{overflow-x:hidden;}
 .headNav .navCon .navCon-cate .navCon-cate-title a{ color:#ffffff;}
 .headNav .navCon .navCon-cate .navCon-cate-title a:hover{ text-decoration:none;}
 
-.headNav .navCon .navCon-cate .cateMenu{ position:absolute; left:0px; font-family:"微软雅黑"; box-shadow:4px 2px 5px rgba(0, 0, 0, 0.3); background:#8d0000; cursor:pointer;}
+.headNav .navCon .navCon-cate .cateMenu{ position:absolute; left:0px; font-family:"微软雅黑"; box-shadow:4px 2px 5px rgba(0, 0, 0, 0.3); background:rgb(182, 29, 29); cursor:pointer;}
 .headNav .navCon .navCon-cate .cateMenu li{ width:210px;overflow:hidden; border-bottom:1px solid #7d0000;border-top:1px solid #a40000;}
 .headNav .navCon .navCon-cate .cateMenu li .cate-tag{ width:190px; padding:10px 5px 10px 15px; overflow:hidden; line-height:25px;}
 .headNav .navCon .navCon-cate .cateMenu li .cate-tag strong{ height:25px; line-height:25px; width:172px; display:block; text-indent:0px; background:url(../image/index_new_bg.png) 160px -128px no-repeat;}
@@ -163,8 +163,8 @@ body{overflow-x:hidden;}
 .headNav .navCon .navCon-cate .cateMenu li .cate-tag .listModel{text-indent:0px; }
 .headNav .navCon .navCon-cate .cateMenu li .cate-tag .listModel p{ height:26px;}
 .headNav .navCon .navCon-cate .cateMenu li .cate-tag .listModel a{ font-size:12px; font-weight:normal; color:#e1bdbd;text-indent:0px; padding:0 11px 0 0;}
-.headNav .navCon .navCon-cate .cateMenu .on{ background:#665446; *margin-bottom:-4px; }
-.headNav .navCon .navCon-cate .cateMenu .on .cate-tag .listModel a{ color:#FFFFFF;}
+.headNav .navCon .navCon-cate .cateMenu .on{ background:#ffffff; *margin-bottom:-4px; }
+.headNav .navCon .navCon-cate .cateMenu .on .cate-tag .listModel a{ color:#000000;}
 
 .float-list-dnav {background: none repeat scroll 0 0 #8D0000;clear: both;font-size: 14px;font-weight: bold;height: 47px;line-height: 47px; width: 210px;}
 .float-list-dnav a {color: #FFFFFF;margin: 0 10px 0 10px;}
@@ -190,7 +190,7 @@ body{overflow-x:hidden;}
 
 
 /*头部样式*/
-.header{width:100%;min-width: 990px; height: 32px;}
+.header{width:100%;min-width: 990px; height: 32px; color: #666;}
 .header .head_nav{width:990px;min-width: 990px; height: 32px; margin: 0 auto;line-height: 32px;}
 .header .head_nav>p{float: left;}
 .header .head_nav ul {float: right;margin: 0; }
