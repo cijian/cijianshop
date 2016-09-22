@@ -157,20 +157,21 @@ body{overflow-x:hidden;}
 
 .headNav .navCon .navCon-cate .cateMenu{ position:absolute; left:0px; font-family:"微软雅黑"; box-shadow:4px 2px 5px rgba(0, 0, 0, 0.3); background:rgb(182, 29, 29); cursor:pointer;}
 .headNav .navCon .navCon-cate .cateMenu li{ width:210px;overflow:hidden; border-bottom:1px solid #7d0000;border-top:1px solid #a40000;}
-.headNav .navCon .navCon-cate .cateMenu li .cate-tag{ width:190px; padding:10px 5px 10px 15px; overflow:hidden; line-height:25px;}
+.headNav .navCon .navCon-cate .cateMenu li .cate-tag{ width:190px; padding:5px 3px 5px 15px; overflow:hidden; line-height:25px;}
 .headNav .navCon .navCon-cate .cateMenu li .cate-tag strong{ height:25px; line-height:25px; width:172px; display:block; text-indent:0px; background:url(../image/index_new_bg.png) 160px -128px no-repeat;}
 .headNav .navCon .navCon-cate .cateMenu li .cate-tag strong a{ font-size:14px; font-weight:bold; color:#fff;}
 .headNav .navCon .navCon-cate .cateMenu li .cate-tag .listModel{text-indent:0px; }
 .headNav .navCon .navCon-cate .cateMenu li .cate-tag .listModel p{ height:26px;}
 .headNav .navCon .navCon-cate .cateMenu li .cate-tag .listModel a{ font-size:12px; font-weight:normal; color:#e1bdbd;text-indent:0px; padding:0 11px 0 0;}
 .headNav .navCon .navCon-cate .cateMenu .on{ background:#ffffff; *margin-bottom:-4px; }
-.headNav .navCon .navCon-cate .cateMenu .on .cate-tag .listModel a{ color:#000000;}
+.headNav .navCon .navCon-cate .cateMenu .on .cate-tag .listModel a{ color:#8D0000;}
+.headNav .navCon .navCon-cate .cateMenu .on .cate-tag strong a{ color:#b61d1d;}
 
 .float-list-dnav {background: none repeat scroll 0 0 #8D0000;clear: both;font-size: 14px;font-weight: bold;height: 47px;line-height: 47px; width: 210px;}
 .float-list-dnav a {color: #FFFFFF;margin: 0 10px 0 10px;}
 .float-list-dnav a:hover{ color:#ffffff;}
 
-.headNav .navCon .navCon-cate .cateMenu .list-item{ width:750px;height:510px; padding:10px 10px 20px 10px; border:1px solid #A7A7A7; border-left:none; background:#FFFFFF; box-shadow:4px 3px 5px rgba(0, 0, 0, 0.5); background:url(../image/catemenubg.png) repeat-y #FFF; position:absolute; left:210px; top:0px;}
+.headNav .navCon .navCon-cate .cateMenu .list-item{ width:750px;min-height:480px; padding:10px 10px 20px 10px; border:1px solid #A7A7A7; border-left:none; background:#FFFFFF; box-shadow:4px 3px 5px rgba(0, 0, 0, 0.5); background:url(../image/catemenubg.png) repeat-y #FFF; position:absolute; left:210px; top:0px;}
 .headNav .navCon .navCon-cate .cateMenu .list-item .itemleft{ width:510px; float:left;}
 .headNav .navCon .navCon-cate .cateMenu .list-item .itemright{ width:220px; float:right;}
 .headNav .navCon .navCon-cate .cateMenu .list-item dl{ padding-left:10px;}

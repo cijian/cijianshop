@@ -3,7 +3,7 @@ $(function () {
     var cateMenu = function () {
         var cateLiNum = $(".cateMenu li").length;
         $(".cateMenu li").each(function (index, element) {
-            if (index < cateLiNum - 1) {
+            if (index < cateLiNum) {
                 $(this).mouseenter(function () {
                     var obj = $(this).find(".list-item");
                     $(this).addClass("on");

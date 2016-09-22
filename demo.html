@@ -8,7 +8,17 @@
     <link rel="stylesheet" href="style/head.css" />
     <script type="text/javascript" src="js/slide.js"></script>
     <script type="text/javascript" src="js/head.js"></script>
+    <style type="text/css">
+        *{margin:0;padding:0;list-style-type:none;}
+        a,img{border:0;}
 
+        /* searchbox */
+        .searchbox{width:520px;height:80px;margin:20px auto 0 auto;}
+        .bodys input{ height:30px;line-height:30px;width:390px;padding:0 10px;float:left;}
+        .bodys .two{ border:#f00 3px solid}
+        .bodys .two2{ background-color:#f00;}
+        .bodys button{float:left;border:0;height:36px;width:100px; color:#FFF; line-height:36px;text-align:center;overflow:hidden;}
+    </style>
 </head>
 <body>
 <div class="header">
@@ -47,6 +57,11 @@
         </ul>
     </div>
 </div>
+<div class="searchbox">
+    <div class="bodys">
+        <p><input type="text" value="" id="" class="two" placeholder="输入宝贝" /><button class="two2">搜索</button></p>
+    </div>
+</div>
 <div class="headNav">
   <div class="navCon w1020">
     <div class="navCon-cate fl">
@@ -55,11 +70,11 @@
         <ul>
           <li style="border-top: none;">
             <div class="cate-tag"> <strong><a href="#">白酒</a></strong>
-              <div class="listModel">
-                <p> <a href="#">茅台</a> <a href="#">洋河</a> <a href="http://jq-school.com">郎酒</a> <a href="#">古井贡酒</a> </p>
-                <p> <a href="#">习酒</a> <a href="#">珍酒</a> <a href="#">红星</a> <a href="http://jq-school.com">泸州老窖</a> </p>
-                <p> <a href="http://jq-school.com">沱牌</a> <a href="http://jq-school.com">国台</a> <a href="#">五粮液</a> <a href="#">剑南春</a> </p>
-              </div>
+              <!--<div class="listModel">-->
+                <!--<p> <a href="#">茅台</a> <a href="#">洋河</a> <a href="http://jq-school.com">郎酒</a> <a href="#">古井贡酒</a> </p>-->
+                <!--<p> <a href="#">习酒</a> <a href="#">珍酒</a> <a href="#">红星</a> <a href="http://jq-school.com">泸州老窖</a> </p>-->
+                <!--<p> <a href="http://jq-school.com">沱牌</a> <a href="http://jq-school.com">国台</a> <a href="#">五粮液</a> <a href="#">剑南春</a> </p>-->
+              <!--</div>-->
             </div>
             <div class="list-item hide">
               <ul class="itemleft">
@@ -94,12 +109,8 @@
             </div>
           </li>
           <li >
-            <div class="cate-tag"> <strong><a href="#">葡萄酒</a></strong>
-              <div class="listModel">
-                <p> <a href="#">中国</a> <a href="#">法国</a> <a href="#">智利</a> <a href="http://jq-school.com">葡萄牙</a> </p>
-                <p> <a href="http://jq-school.com">意大利</a> <a href="http://jq-school.com">澳大利亚</a> <a href="#">德国</a> <a href="#">南非</a> </p>
-                <p> <a href="#">美国</a> <a href="#">阿根廷</a> <a href="#">西班牙</a> </p>
-              </div>
+            <div class="cate-tag">
+                <strong><a href="#">葡萄酒</a></strong>
             </div>
             <div class="list-item hide">
               <ul class="itemleft">
@@ -136,11 +147,8 @@
             </div>
           </li>
           <li >
-            <div class="cate-tag"> <strong><a href="#">洋酒</a></strong>
-              <div class="listModel">
-                <p> <a href="#">格兰威特</a> <a href="#">杰克丹尼</a> <a href="#">轩尼诗</a> </p>
-                <p> <a href="#">尊尼获加</a> <a href="#">皇家路易</a> <a href="#">百龄坛</a> </p>
-              </div>
+            <div class="cate-tag">
+                <strong><a href="#">洋酒</a></strong>
             </div>
             <div class="list-item hide">
               <ul class="itemleft">
@@ -170,10 +178,8 @@
             </div>
           </li>
           <li >
-            <div class="cate-tag"> <strong><a href="#">黄酒</a></strong>
-              <div class="listModel">
-                <p> <a href="#">石库门</a> <a href="#">女儿红</a> <a href="#">古越龙山</a> </p>
-              </div>
+            <div class="cate-tag">
+                <strong><a href="#">黄酒</a></strong>
             </div>
             <div class="list-item hide">
               <ul class="itemleft">
@@ -198,9 +204,6 @@
           </li>
           <li >
             <div class="cate-tag"> <strong><a href="#">保健酒与啤酒</a></strong>
-              <div class="listModel">
-                <p> <a href="#">百威</a> <a href="#">青岛</a> <a href="#">喜力</a> <a href="#">劲酒</a> </p>
-              </div>
             </div>
             <div class="list-item hide">
               <ul class="itemleft">
@@ -217,9 +220,6 @@
                 <div class="ad-list mt10"> <a href="#"><img src='img0.gjw.com/famous/2013/1108/882341974a8543cf93f2a7d18ff277ab.jpg' width='210' height='100' /></a> </div>
               </ul>
             </div>
-          </li>
-          <li>
-            <div class="float-list-dnav"> <a href="http://jq-school.com">新品</a> <a href="#">清仓</a> <a href="#">多买优惠</a> </div>
           </li>
         </ul>
       </div>

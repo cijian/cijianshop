@@ -49,14 +49,14 @@
                 if(opts.autoPlay){
                     clearInterval(time);
                 }
-                $(this).find('.ctrl-slide').css({opacity:0.6});
+                $(this).find('.ctrl-slide').css({opacity:0.3});
             });
             //  leave
             $(this).on('mouseleave', function(){
                 if(opts.autoPlay){
                     startAtuoPlay();
                 }
-                $(this).find('.ctrl-slide').css({opacity:0.15});
+                $(this).find('.ctrl-slide').css({opacity:0});
             });
             startAtuoPlay();
             // auto play
