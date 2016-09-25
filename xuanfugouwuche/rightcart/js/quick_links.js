@@ -11,15 +11,15 @@ jQuery(function($){
 	var 
 	quickPopXHR,
 	loadingTmpl = '<div class="loading" style="padding:30px 80px"><i></i><span>Loading...</span></div>',
-	popTmpl = '<a href="javascript:;" class="ibar_closebtn" title="关闭"></a><div class="ibar_plugin_title"><h3><%=title%></h3></div><div class="pop_panel"><%=content%></div><div class="arrow"><i></i></div><div class="fix_bg"></div>',
-	historyListTmpl = '<ul><%for(var i=0,len=items.length; i<5&&i<len; i++){%><li><a href="<%=items[i].productUrl%>" target="_blank" class="pic"><img alt="<%=items[i].productName%>" src="<%=items[i].productImage%>" width="60" height="60"/></a><a href="<%=items[i].productUrl%>" title="<%=items[i].productName%>" target="_blank" class="tit"><%=items[i].productName%></a><div class="price" title="单价"><em>&yen;<%=items[i].productPrice%></em></div></li><%}%></ul>',
-	newMsgTmpl = '<ul><li><a href="#"><span class="tips">新回复<em class="num"><b><%=items.commentNewReply%></b></em></span>商品评价/晒单</a></li><li><a href="#"><span class="tips">新回复<em class="num"><b><%=items.consultNewReply%></b></em></span>商品咨询</a></li><li><a href="#"><span class="tips">新回复<em class="num"><b><%=items.messageNewReply%></b></em></span>我的留言</a></li><li><a href="#"><span class="tips">新通知<em class="num"><b><%=items.arrivalNewNotice%></b></em></span>到货通知</a></li><li><a href="#"><span class="tips">新通知<em class="num"><b><%=items.reduceNewNotice%></b></em></span>降价提醒</a></li></ul>',
+	popTmpl = '<div class="ibar_plugin_title"><h3><%=title%></h3></div><div class="pop_panel"><%=content%></div><div class="arrow"><i></i></div><div class="fix_bg"></div>',
+	//historyListTmpl = '<ul><%for(var i=0,len=items.length; i<5&&i<len; i++){%><li><a href="<%=items[i].productUrl%>" target="_blank" class="pic"><img alt="<%=items[i].productName%>" src="<%=items[i].productImage%>" width="60" height="60"/></a><a href="<%=items[i].productUrl%>" title="<%=items[i].productName%>" target="_blank" class="tit"><%=items[i].productName%></a><div class="price" title="单价"><em>&yen;<%=items[i].productPrice%></em></div></li><%}%></ul>',
+	//newMsgTmpl = '<ul><li><a href="#"><span class="tips">新回复<em class="num"><b><%=items.commentNewReply%></b></em></span>商品评价/晒单</a></li><li><a href="#"><span class="tips">新回复<em class="num"><b><%=items.consultNewReply%></b></em></span>商品咨询</a></li><li><a href="#"><span class="tips">新回复<em class="num"><b><%=items.messageNewReply%></b></em></span>我的留言</a></li><li><a href="#"><span class="tips">新通知<em class="num"><b><%=items.arrivalNewNotice%></b></em></span>到货通知</a></li><li><a href="#"><span class="tips">新通知<em class="num"><b><%=items.reduceNewNotice%></b></em></span>降价提醒</a></li></ul>',
 	quickPop = quickShell.find('#quick_links_pop'),
 	quickDataFns = {
 		//购物信息
 		message_list: {
 			title: '购物车',
-			content: '<div class="ibar_plugin_content"><div class="ibar_cart_group ibar_cart_product"><div class="ibar_cart_group_header"><span class="ibar_cart_group_title">模板堂</span><a href="#">我的购物车</a></div><ul><li class="cart_item"><div class="cart_item_pic"><a href="#"><img src="images/xiez.jpg" /></a></div><div class="cart_item_desc"><a href="#" class="cart_item_name">夏季透气真皮豆豆鞋反绒男士休闲鞋韩版磨砂驾车鞋英伦船鞋男鞋子</a><div class="cart_item_sku"><span>尺码：38码（精工限量版）</span></div><div class="cart_item_price"><span class="cart_price">￥700.00</span></div></div>	</li></ul></div><div class="cart_handler"><div class="cart_handler_header"><span class="cart_handler_left">共<span class="cart_price">1</span>件商品</span><span class="cart_handler_right">￥569.00</span></div><a href="#" class="cart_go_btn" target="_blank">去购物车结算</a></div></div>',
+			content: '<div class="ibar_plugin_content"><div class="ibar_cart_group ibar_cart_product"><ul><li class="cart_item"><div class="cart_item_pic"><a href="#"><img src="images/xiez.jpg" /></a></div><div class="cart_item_desc"><a href="#" class="cart_item_name">夏季透气真皮豆豆鞋反绒男士休闲鞋韩版磨砂驾车鞋英伦船鞋男鞋子</a><div class="cart_item_sku"><span>尺码：38码（精工限量版）</span></div><div class="cart_item_price"><span class="cart_price">￥700.00</span></div></div>	</li></ul></div><div class="cart_handler"><div class="cart_handler_header"><span class="cart_handler_left">共<span class="cart_price">1</span>件商品</span><span class="cart_handler_right">￥569.00</span></div><a href="#" class="cart_go_btn" target="_blank">去购物车结算</a></div></div>',
 			init:$.noop
 		},
 		
@@ -53,11 +53,7 @@ jQuery(function($){
 	};
 	
 	//showQuickPop
-	var 
-	prevPopType,
-	prevTrigger,
-	doc = $(document),
-	popDisplayed = false,
+	var prevPopType, prevTrigger, doc = $(document), popDisplayed = false,
 	hideQuickPop = function(){
 		if(prevTrigger){
 			prevTrigger.removeClass('current');
@@ -65,7 +61,8 @@ jQuery(function($){
 		popDisplayed = false;
 		prevPopType = '';
 		quickPop.hide();
-		quickPop.animate({left:280,queue:true});
+		$('.mui-mbar-tabs').animate({right:-280},'fast');
+		//quickPop.animate({left:270,queue:true});
 	},
 	showQuickPop = function(type){
 		if(quickPopXHR && quickPopXHR.abort){
@@ -81,19 +78,22 @@ jQuery(function($){
 		quickPop[0].className = 'quick_links_pop quick_' + type;
 		popDisplayed = true;
 		prevPopType = type;
-		quickPop.show();
-		quickPop.animate({left:0,queue:true});
+		$('.mui-mbar-tabs').animate({right:0},'fast',function(){
+			quickPop.show();
+		});
+		//quickPop.animate({left:0,queue:true});
 	};
 	quickShell.bind('click.quick_links', function(e){
 		e.stopPropagation();
 	});
-	quickPop.delegate('a.ibar_closebtn','click',function(){
-		quickPop.hide();
-		quickPop.animate({left:280,queue:true});
-		if(prevTrigger){
-			prevTrigger.removeClass('current');
-		}
-	});
+	//购物车右上关闭键
+	//quickPop.delegate('a.ibar_closebtn','click',function(){
+	//	quickPop.hide();
+	//	quickPop.animate({left:280,queue:true});
+	//	if(prevTrigger){
+	//		prevTrigger.removeClass('current');
+	//	}
+	//});
 
 	//通用事件处理
 	var 
@@ -154,9 +154,11 @@ jQuery(function($){
 	function checkScroll(){
 		view.scrollTop()>100 ? showReturnTop() : hideReturnTop();
 	}
+	//显示top图标
 	function showReturnTop(){
 		quickPanel.addClass('quick_links_allow_gotop');
 	}
+	//隐藏top图标
 	function hideReturnTop(){
 		quickPanel.removeClass('quick_links_allow_gotop');
 	}

@@ -156,7 +156,7 @@ body{overflow-x:hidden;}
 .headNav .navCon .navCon-cate .navCon-cate-title a:hover{ text-decoration:none;}
 
 .headNav .navCon .navCon-cate .cateMenu{ position:absolute; left:0px; font-family:"微软雅黑"; box-shadow:4px 2px 5px rgba(0, 0, 0, 0.3); background:rgb(182, 29, 29); cursor:pointer;}
-.headNav .navCon .navCon-cate .cateMenu li{ width:210px;overflow:hidden; border-bottom:1px solid #7d0000;border-top:1px solid #a40000;}
+.headNav .navCon .navCon-cate .cateMenu li{ width:210px;overflow:hidden;border-top:1px solid #a40000;}
 .headNav .navCon .navCon-cate .cateMenu li .cate-tag{ width:190px; padding:5px 3px 5px 15px; overflow:hidden; line-height:25px;}
 .headNav .navCon .navCon-cate .cateMenu li .cate-tag strong{ height:25px; line-height:25px; width:172px; display:block; text-indent:0px; background:url(../image/index_new_bg.png) 160px -128px no-repeat;}
 .headNav .navCon .navCon-cate .cateMenu li .cate-tag strong a{ font-size:14px; font-weight:bold; color:#fff;}
@@ -197,9 +197,17 @@ body{overflow-x:hidden;}
 .header .head_nav ul {float: right;margin: 0; }
 
 .header .head_nav ul li{width: 100px;height:32px;line-height: 32px;text-align: center;float:left;}
-
+.nav_header ul{ margin-left: 20px;}
+.nav_header ul li{display: inline-block;width:100px; height: 38px; text-align: center;
+      font: 400 15px/38px "microsoft yahei";
+    font-family: "Microsoft YaHei",tahoma,arial,"Hiragino Sans GB","\5b8b\4f53",sans-serif;}
+.nav_header ul li a{color: black;}
+.nav_header ul li a:hover{
+    text-decoration:none;
+    color: #FF3111;
+}
 /*幻灯片样式*/
-.slidemain{ width: 960px; height:542px; margin:0 auto;}
+.slidemain{ width: 820px; height:400px; margin:0 auto;}
 img { border: 0;}
 .ck-slide ul { margin: 0; padding: 0; list-style-type: none;}
 .ck-slide { position: relative; overflow: hidden;}
@@ -214,5 +222,11 @@ img { border: 0;}
 .ck-slidebox ul li em { display: block; width: 12px; height: 12px; border-radius: 100%; background-color: #fff; text-indent: -9999px; cursor: pointer;}
 .ck-slidebox ul li.current em { background-color: #fe6500;}
 .ck-slidebox ul li em:hover { background-color: #fe6500;}
-.ck-slide { width: 780px; height: 542px; float:right;}
+.ck-slide { width: 700px; height: 400px; float:right;}
 .ck-slide ul.ck-slide-wrapper { height: 320px;}
+
+
+/*推荐位*/
+.tuijianwei{height: 250px;}
+.tuijianwei h4{text-align: center;}
+.tuijianwei .rpro{border: solid 1px #10181e}
