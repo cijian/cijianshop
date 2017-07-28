@@ -23,7 +23,7 @@
 		<link href="css/jquery.tagsinput.css" rel="stylesheet">
 
 		<!-- Date Time Picker -->
-		<link href="css/datetimepicker.css" rel="stylesheet">
+		<link href="css/datetimepicker/bootstrap-datetimepicker.css" rel="stylesheet">
 		
 		<!-- Select2 -->
 		<link href="css/select2/select2.css" rel="stylesheet"/>	
@@ -1783,13 +1783,13 @@
 		<script src='js/jquery.tagsinput.min.js'></script>
 
 		<!-- Moment -->
-		<script src='js/uncompressed/moment.js'></script>
+		<script src='js/uncompressed/moment.min.js'></script>
 
 		<!-- Date Time picker -->
-		<script src='js/uncompressed/bootstrap-datetimepicker.js'></script>
+		<script src='js/datetimepicker/bootstrap-datetimepicker.js'></script>
 
 		<!-- Select2 -->
-		<script src='js/select2.min.js'></script>
+		<script src='js/select2/select2.min.js'></script>
 
 		<!-- Slimscroll -->
 		<script src='js/jquery.slimscroll.min.js'></script>
@@ -1829,7 +1829,12 @@
 
 				//Date & Time Picker
 				$('.datepicker-input').datetimepicker({
-					pickTime: false
+                    format:'yyyy-mm-dd',
+                    todayHighlight: 1,
+                    startView: 2,
+                    minView: 2,
+                    todayBtn:  1,
+                    autoclose: 1,
 				});
 
 				//Date & Time Picker
